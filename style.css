@@ -1,0 +1,164 @@
+body {
+    font-family: 'Lato',Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+h1 {
+    margin: 0;
+  }
+  
+  /* Navigation styles */
+  /* Default styles for header and nav */
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  z-index: 999;
+  transition: top 0.3s ease;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Styles for hamburger menu */
+#hamburger {
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+
+#hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  /* Styles for header and nav when screen width is 768px or less */
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center; /* add this to center the links horizontally */
+    align-items: center;
+    flex-direction: column; /* add this to stack the links vertically */
+    overflow: hidden; /* add this to hide the links that overflow the container */
+  }
+  
+  .navbar ul.active {
+    height: 100%; /* change this to 100% to show the links */
+    transition: height 0.5s ease; /* add this to animate the height change */
+  }
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  /* Styles for hamburger menu */
+  #hamburger {
+    display: block;
+  }
+
+  /* Styles for navigation links when hamburger menu is active */
+  #hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  #hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  nav.active {
+    display: block;
+  }
+}
+
+  /* Main content styles */
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  article {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+.link :hover {
+    text-decoration: underline;
+}  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For tablets and larger screens */
+    main {
+      padding: 40px;
+    }
+  
+    article {
+      flex-basis: 40%;
+      margin: 20px;
+    }
+  }
